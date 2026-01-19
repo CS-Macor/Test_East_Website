@@ -77,9 +77,22 @@ body ::selection {
 
   /* font-weight: ; */
 }
+
 .navbar {
+  /* display: flex;
+  justify-content: space-around; */
+
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  /* horizontal */
+  /*align-items: center;     /* vertical */
+
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
 }
 
 .wrap-main .logo {
@@ -92,8 +105,9 @@ body ::selection {
 
 .navbar ul {
   display: flex;
-  margin-left: 45px;
+  /* margin-left: 45px; */
   column-gap: 15px;
+  /* margin: 0 auto; */
 }
 
 .navbar ul li {
@@ -102,6 +116,7 @@ body ::selection {
   /* text-indent: 3px; */
   margin-left: 26px;
   list-style-type: none;
+
 }
 
 .navbar ul li a {
@@ -111,6 +126,7 @@ body ::selection {
   font-size: 16px;
 
   text-decoration: none;
+  /* margin: 0 auto; */
 }
 
 .social-icon {
@@ -124,7 +140,7 @@ body ::selection {
 
 .social-icon .cambodian-flag {
   /* column-gap: 1px; */
-  margin-left: 10px;
+  /* margin-left: 10px; */
   width: 20px;
   height: 15px;
   cursor: pointer;
@@ -135,10 +151,11 @@ body ::selection {
   color: white;
   cursor: pointer;
   font-size: 16px;
+  margin-left: 0;
 }
 
 .icon-for-3 {
-  margin-left: 25px;
+  margin-left: 15px;
   font-size: 20px;
 }
 
@@ -152,9 +169,13 @@ body ::selection {
   border-radius: 8px;
 
   cursor: pointer;
+  display: flex;
 }
-
-.wrap-main .title {
+.icon-for-3 .fa-brands:hover{
+  color:var(--black);
+  background:var(--grey-tint);
+}
+.wrap-main .title{
   /* background: red; */
   position: absolute;
   height: 100px;
@@ -163,7 +184,7 @@ body ::selection {
   width: 200px;
   /* background-color: black; */
   color: white;
-  /* margin: auto; */
+  margin: 0 auto;
 }
 
 .title h1 {
@@ -239,22 +260,28 @@ hr {
   margin: 30px 70px;
   column-gap: 25px; */
 
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  gap: 10px; /* Adds space between boxes */
-  justify-content: space-between; /* Distributes space evenly */
+  display: flex;
+  /* Use flexbox for layout */
+  flex-wrap: wrap;
+  /* Allow items to wrap to the next line */
+  gap: 10px;
+  /* Adds space between boxes */
+  justify-content: space-between;
+  /* Distributes space evenly */
   margin: 30px 70px;
 }
 
 .card-box .box {
   /* Calculates the width for 3 items per line, accounting for the gap */
   flex: 1 1 calc(33.33% - 10px);
-  box-sizing: border-box; /* Ensures padding/border are included in the width */
+  box-sizing: border-box;
+  /* Ensures padding/border are included in the width */
   padding: 20px;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   text-align: center;
-  min-width: 100px; /* Prevents boxes from becoming too small */
+  min-width: 100px;
+  /* Prevents boxes from becoming too small */
 }
 
 .box {
@@ -293,11 +320,11 @@ hr {
   cursor: pointer;
 }
 
-.box:hover > [class="title-box"] {
+.box:hover>[class="title-box"] {
   color: green;
 }
 
-.box:hover > [class="btn-box"] {
+.box:hover>[class="btn-box"] {
   background-color: green;
   color: white;
 }
@@ -327,13 +354,16 @@ hr {
 .card-box-2 {
   /* Calculates the width for 3 items per line, accounting for the gap */
   flex: 1 1 calc(33.33% - 10px);
-  box-sizing: border-box; /* Ensures padding/border are included in the width */
+  box-sizing: border-box;
+  /* Ensures padding/border are included in the width */
   padding: 20px;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   text-align: center;
-  min-width: 100px; /* Prevents boxes from becoming too small */
-  justify-content: center; /* Centers items horizontally(left-right) */
+  min-width: 100px;
+  /* Prevents boxes from becoming too small */
+  justify-content: center;
+  /* Centers items horizontally(left-right) */
 }
 
 .box-in-cardbox-2 {
@@ -360,19 +390,19 @@ hr {
   border: 2px solid green;
 }
 
-.box-in-cardbox-2:hover > [class="fa-solid fa-landmark"] {
+.box-in-cardbox-2:hover>[class="fa-solid fa-landmark"] {
   background: green;
 }
 
-.box-in-cardbox-2:hover > [class="fa-solid fa-sack-dollar"] {
+.box-in-cardbox-2:hover>[class="fa-solid fa-sack-dollar"] {
   background: green;
 }
 
-.box-in-cardbox-2:hover > [class="fa-solid fa-user-group"] {
+.box-in-cardbox-2:hover>[class="fa-solid fa-user-group"] {
   background: green;
 }
 
-.box-in-cardbox-2:hover > [class="fa-solid fa-hand-holding-dollar"] {
+.box-in-cardbox-2:hover>[class="fa-solid fa-hand-holding-dollar"] {
   background: green;
 }
 
@@ -394,11 +424,16 @@ hr {
   width: 100%;
   min-height: 400px;
   display: flex;
-  flex-direction: column; /* stack vertically */
-  align-items: center; /* center horizontally */
-  gap: 30px; /* space between box-3 and box-4 */
-  justify-content: flex-start; /* move content to top */
+  flex-direction: column;
+  /* stack vertically */
+  align-items: center;
+  /* center horizontally */
+  gap: 30px;
+  /* space between box-3 and box-4 */
+  justify-content: flex-start;
+  /* move content to top */
 }
+
 .card-box-3 {
   /* background: #efefef; */
   display: flex;
@@ -408,21 +443,25 @@ hr {
   margin-top: 0;
   padding-top: 0;
 }
+
 .card-box-3 :hover {
   background-color: #efefef;
   color: #000000;
   font-weight: bold;
 }
+
 .btn-card-box-3 {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
+
 @media (max-width: 600px) {
   .btn-card-box-3 {
     flex-wrap: wrap;
   }
 }
+
 .btn-card-box-3 button {
   /* padding: 12px 24px; */
   margin-top: 30px;
@@ -444,12 +483,14 @@ hr {
   justify-content: center;
   gap: 20px;
 }
+
 @media (max-width: 768px) {
   .card-box-4 {
     flex-wrap: wrap;
     gap: 15px;
   }
 }
+
 .card-box-5 {
   display: flex;
   /* justify-content: center; */
@@ -460,11 +501,13 @@ hr {
   width: 100%;
   min-height: 40px;
 }
+
 .div-in-card-box-5 p {
   color: #efefef;
   font-size: 14px;
   margin-top: 8px;
 }
+
 @media (max-width: 768px) {
   .card-box-5 {
     flex-wrap: wrap;
@@ -477,7 +520,10 @@ hr {
   font-size: 20px;
   margin-bottom: 22px;
 }
-
+.icon-for-3-footer .fa-brands:hover{
+  color: var(--grey-tint);
+  background: red;
+}
 .icon-for-3-footer .fa-brands {
   margin-top: 31px;
   background: #efefef;
@@ -487,6 +533,7 @@ hr {
   border-radius: 8px;
   cursor: pointer;
 }
+
 @media (max-width: 768px) {
   .icon-for-3-footer {
     flex-wrap: wrap;
