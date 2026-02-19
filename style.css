@@ -53,7 +53,9 @@ html {
   font-family: "Khmer Siemreap";
   src:
     url("fonts/siemreap-khmer-400-normal.woff2") format("woff2"),
-    url("fonts/siemreap-khmer-400-normal.woff") format("woff");
+    url("fonts/siemreap-khmer-400-normal.woff") format("woff"),
+    url("fonts/KhmerOSMuolLight.woff2") format("woff2"),
+    url("fonts/KhmerOSMuolLight.woff") format("woff");
 }
 /* Decorate that Khmer Siemreap font to be red color */
 .title > p:nth-of-type(1) {
@@ -61,6 +63,11 @@ html {
   font-size: 25pt;
   white-space: nowrap;
   width: 500px;
+}
+.div-in-card-box-5 p > span {
+  color: white;
+  font-size: 20pt;
+  font-family: "Khmer OS Muol", sans-serif;
 }
 /* ./Keep Khmer font to differnce browser */
 body {
