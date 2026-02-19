@@ -48,12 +48,29 @@
 html {
   font-size: 62.5%;
 }
-
+/* Keep Khmer font to differnce browser(#1 in @font-face) */
+@font-face {
+  font-family: "Khmer Siemreap";
+  src:
+    url("fonts/siemreap-khmer-400-normal.woff2") format("woff2"),
+    url("fonts/siemreap-khmer-400-normal.woff") format("woff");
+}
+/* Decorate that Khmer Siemreap font to be red color */
+.title > p:nth-of-type(1) {
+  color: red;
+  font-size: 25pt;
+  white-space: nowrap;
+  width: 500px;
+}
+/* ./Keep Khmer font to differnce browser */
 body {
   color: #495057;
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
   font-family: var(--font-family);
+  /* Keep Khmer font to differnce browser(#2 in Body) */
+  font-family: "Khmer Siemreap", sans-serif;
+  /* ./Keep Khmer font to differnce browser */
 }
 
 body ::selection {
@@ -184,12 +201,14 @@ body ::selection {
   color: white;
   margin: 0 auto;
 }
-.title > p:nth-of-type(1) {
+/* Font Khmer Siemreap */
+
+/* .title > p:nth-of-type(1) {
   color: red;
   font-size: 25pt;
   white-space: nowrap;
   width: 500px;
-}
+} */
 .title h1 {
   margin: auto;
 
